@@ -9,31 +9,41 @@ import React from "react";
  * It should never become blue, so stop at green
  */
 
+function getInputStyle(length) {
+  const hue = Math.min(length * 10, 120);
+  return {
+    backgroundColor: `hsl(${hue}, 100%, 50%)`
+  };
+}
+
 function PasswordInput() {
   const [password, setPassword] = React.useState("");
-  const inputStyle = {
-    background: `hsl(${changeBackgroundColor()},100%, 50%)`
-  };
+  const passwordLength = password.length;
 
-  function changeBackgroundColor() {
-    if (password.length < 12) {
-      return password.length * 10;
-    }
-  }
+  // Meine Loesung:
+
+  // const inputStyle = {
+  //   background: `hsl(${changeHue()},100%, 50%)`
+  // };
+
+  // function changeHue() {
+  //   if (password.length < 12) {
+  //     return password.length * 10;
+  //   }
+  // }
 
   return (
     <div>
       <input
         className="password-input"
         type="password"
-        style={inputStyle}
+        style={getInputStyle(passwordLength)}
         value={password}
         onChange={event => {
           setPassword(event.target.value);
-          changeBackgroundColor();
         }}
       />
-      {password.length}
+      {passwordLength}
     </div>
   );
 }
