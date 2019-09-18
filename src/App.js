@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import PasswordInput from "./components/PasswordInput";
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -15,6 +16,8 @@ function App() {
   return (
     <AppContainer>
       <Header color={"#FF0"} />
+      <PasswordInput />
+    </div>
     </AppContainer>
   );
 }
