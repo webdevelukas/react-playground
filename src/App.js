@@ -17,7 +17,6 @@ function App() {
     <AppContainer>
       <Header color={"#FF0"} />
       <PasswordInput />
-    </div>
     </AppContainer>
   );
 }
