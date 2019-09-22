@@ -5,6 +5,6 @@ export default {
   title: "Badge"
 };
 
-export const Filled = () => <Badge>Asiatisch</Badge>;
+export const Active = () => <Badge />;
 
-export const Borders = () => <Badge active={false}>Asiatisch</Badge>;
+export const Inactive = () => <Badge active={false} />;

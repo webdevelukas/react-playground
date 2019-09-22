@@ -1,18 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = styled.button`
+const SingleButton = styled.button`
   width: 60px;
   height: 60px;
-  background-color: #fff;
+  background-color: ${props => (props.active ? "#547fb3" : "white")};
   border-radius: 10px;
-  padding: 14px;
-  fill: #547fb3;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  fill: ${props => (props.active ? "white" : "#547fb3")};
+  padding-top: 2px;
+  outline: none;
 `;
 
-export default function IconButton({ children }) {
-  return <Button>{children}</Button>;
+export default function IconButton({ active, children }) {
+  return <SingleButton active={active}>{children}</SingleButton>;
 }
-
-//SquareButton, RoundedButton?

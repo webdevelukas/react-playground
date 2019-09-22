@@ -12,6 +12,9 @@ const Badge = styled.div`
     props.active ? "rgba(255, 255, 255, 1)" : "rgba(84, 127, 179, 1)"};
 `;
 
-export default function ColoredBadge({ active = true, children }) {
+export default function ColoredBadge({
+  active = true,
+  children = "Asiatisch"
+}) {
   return <Badge active={active}>{children}</Badge>;
 }
