@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const PricingDiv = styled.div`
   display: flex;
@@ -17,3 +18,7 @@ const PricingDiv = styled.div`
 export default function Pricing({ children }) {
   return <PricingDiv>{children}</PricingDiv>;
 }
+
+Pricing.propTypes = {
+  children: PropTypes.element
+};

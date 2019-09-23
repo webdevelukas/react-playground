@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const DistancingDiv = styled.div`
   display: flex;
@@ -17,3 +18,7 @@ const DistancingDiv = styled.div`
 export default function Distancing({ children }) {
   return <DistancingDiv>{children}</DistancingDiv>;
 }
+
+Distancing.propTypes = {
+  children: PropTypes.element
+};

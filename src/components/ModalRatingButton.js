@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Favorite from "../Icons/Favorite";
+import PropTypes from "prop-types";
 
 const RatingButton = styled.button`
   border: none;
@@ -17,3 +18,7 @@ export default function RatingStar({ active }) {
     </RatingButton>
   );
 }
+
+RatingStar.propTypes = {
+  active: PropTypes.bool
+};

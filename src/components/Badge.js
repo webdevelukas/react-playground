@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Badge = styled.div`
   display: inline-block;
@@ -18,3 +19,8 @@ export default function ColoredBadge({
 }) {
   return <Badge active={active}>{children}</Badge>;
 }
+
+ColoredBadge.propTypes = {
+  active: PropTypes.bool,
+  children: PropTypes.element
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const RatingsDiv = styled.div`
   display: flex;
@@ -17,3 +18,7 @@ const RatingsDiv = styled.div`
 export default function Ratings({ children }) {
   return <RatingsDiv>{children}</RatingsDiv>;
 }
+
+Ratings.propTypes = {
+  children: PropTypes.element
+};

@@ -5,6 +5,7 @@ import Walk from "../Icons/Walk";
 import Star from "../Icons/Star";
 import Euro from "../Icons/Euro";
 import Food from "../Icons/Food";
+import PropTypes from "prop-types";
 
 const FilterBarContainer = styled.nav`
   display: flex;
@@ -35,3 +36,7 @@ export default function FilterBar({ selected }) {
     </FilterBarContainer>
   );
 }
+
+FilterBar.propTypes = {
+  selected: PropTypes.string
+};

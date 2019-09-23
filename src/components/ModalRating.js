@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import RatingStar from "./ModalRatingButton";
+import PropTypes from "prop-types";
 
 const ModalRatingContainer = styled.ul`
   margin: 0;
@@ -32,3 +33,7 @@ export default function ModalRating({ stars }) {
     </ModalRatingContainer>
   );
 }
+
+ModalRating.propType = {
+  stars: PropTypes.number
+};

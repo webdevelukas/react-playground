@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const CardImg = styled.img`
   height: 130px;
@@ -11,3 +12,7 @@ const CardImg = styled.img`
 export default function CardImage({ imgSrc }) {
   return <CardImg src={imgSrc} />;
 }
+
+CardImage.propType = {
+  src: PropTypes.string
+};

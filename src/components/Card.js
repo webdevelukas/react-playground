@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const CardLayout = styled.article`
   display: flex;
@@ -11,6 +12,10 @@ const CardLayout = styled.article`
   box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.2);
 `;
 
-export default function Card() {
-  return <CardLayout></CardLayout>;
+export default function Card({ children }) {
+  return <CardLayout>{children}</CardLayout>;
 }
+
+Card.propTypes = {
+  children: PropTypes.element
+};
