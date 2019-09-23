@@ -20,5 +20,5 @@ export default function Distancing({ children }) {
 }
 
 Distancing.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.array
 };

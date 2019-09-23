@@ -20,5 +20,5 @@ export default function Ratings({ children }) {
 }
 
 Ratings.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.array
 };

@@ -20,5 +20,5 @@ export default function Pricing({ children }) {
 }
 
 Pricing.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.array
 };
