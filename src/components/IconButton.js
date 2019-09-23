@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const SingleButton = styled.button`
   width: 60px;
@@ -15,3 +16,8 @@ const SingleButton = styled.button`
 export default function IconButton({ active, children }) {
   return <SingleButton active={active}>{children}</SingleButton>;
 }
+
+IconButton.propTypes = {
+  active: PropTypes.bool,
+  children: PropTypes.element
+};
